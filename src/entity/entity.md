@@ -25,3 +25,7 @@ changeName(name: string) {
 ```
 
 A modelagem de um domínio rico expressa o negócio, não se baseia apenas em getters e setters.
+
+A entidade deve ser sempre constante, os dados necessários devem existir, caso contrário, não faz sentido, a entidade não é capaz de expressar a regra de negócio.
+
+A entidade deve se autovalidar, e não depender de um elemento externo a esta.
