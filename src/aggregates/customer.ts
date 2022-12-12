@@ -4,12 +4,15 @@ export class Customer {
   _id: string
   _name: string
   _address!: Address
-  _active = true
+  _active = false
 
-  constructor(id: string, name: string, address: Address) {
+  get name() {
+    return this._name
+  }
+
+  constructor(id: string, name: string) {
     this._id = id
     this._name = name
-    this._address = address
 
     this.validate()
   }
@@ -19,10 +22,6 @@ export class Customer {
       throw new Error('Customer name cannot be empty')
     }
 
-    if (!this._address) {
-      throw new Error('Customer address cannot be empty')
-    }
-
     if (this._id.length === 0) {
       throw new Error('Customer id cannot be empty')
     }
@@ -30,9 +29,17 @@ export class Customer {
 
   changeName(name: string) {
     this._name = name
+    this.validate()
+  }
+
+  isActive() {
+    return this._active
   }
 
   activate() {
+    if (!this._address) {
+      throw new Error('Customer address cannot be empty')
+    }
     this._active = true
   }
 
