@@ -1,13 +1,22 @@
 import { Address } from '../value-objects/address'
 
 export class Customer {
-  _id: string
-  _name: string
-  _address!: Address
-  _active = false
+  private _id: string
+  private _name: string
+  private _address!: Address
+  private _active = false
+  private _rewardPoints = 0
 
   get name() {
     return this._name
+  }
+
+  get id() {
+    return this._id
+  }
+
+  get rewardPoints() {
+    return this._rewardPoints
   }
 
   constructor(id: string, name: string) {
@@ -49,5 +58,9 @@ export class Customer {
 
   changeAddress(address: Address) {
     this._address = address
+  }
+
+  addRewardPoints(points: number) {
+    this._rewardPoints += points
   }
 }
