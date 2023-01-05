@@ -28,10 +28,14 @@ export default class Order {
       throw new Error('Order should contain at least 1 item')
     }
 
+    if (this._items.some(item => item.quantity <= 0)) {
+      throw new Error('Quantity should be greater than 0')
+    }
+
     return true
   }
 
   total(): number {
-    return this._items.reduce((total, item) => total + item._price, 0)
+    return this._items.reduce((total, item) => total + item.orderItemTotal(), 0)
   }
 }
