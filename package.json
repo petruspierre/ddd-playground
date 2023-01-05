@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "tsc --watch",
-    "test": "jest"
+    "test": "tsc --noEmit && jest"
   },
   "devDependencies": {
     "@swc/cli": "^0.1.57",
