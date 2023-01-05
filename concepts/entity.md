@@ -6,7 +6,7 @@ Entidades possuem comportamento.
 
 ### Entidade anêmica
 
-Não representam as regras de negócios com a devida semântica.
+Não representam as regras de negócios com a devida semântica. [Exemplo](/concepts/examples/customer-anemic.ts)
 
 ### Regras de negócios
 
