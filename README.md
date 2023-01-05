@@ -1,5 +1,7 @@
-# Concepts
+# Conceitos
 
-- [Entity](/concepts/entity.md)
-- [Aggregates](/concepts/aggregates.md)
-- [Value Objects](/concepts/value-objects.md)
+- [Entidade](/concepts/entity.md)
+- [Agregados](/concepts/aggregates.md)
+- [Objetos de valor](/concepts/value-objects.md)
+
+> Soon more concepts and english version
