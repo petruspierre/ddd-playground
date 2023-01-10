@@ -1,4 +1,4 @@
-import OrderItem from '../entity/order_item'
+import OrderItem from './order_item'
 import Order from './order'
 
 describe('Order aggregate unit tests', () => {
