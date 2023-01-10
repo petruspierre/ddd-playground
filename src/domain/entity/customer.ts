@@ -19,6 +19,10 @@ export class Customer {
     return this._rewardPoints
   }
 
+  get Address() {
+    return this._address
+  }
+
   constructor(id: string, name: string) {
     this._id = id
     this._name = name
