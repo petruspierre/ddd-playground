@@ -77,6 +77,7 @@ describe('Order repository test', () => {
           price: orderItem.price,
           quantity: orderItem.quantity,
           order_id: order.id,
+          product_id: product.id,
         },
       ],
     })

@@ -8,7 +8,7 @@ import {
 } from 'sequelize-typescript'
 
 import ProductModel from './product.model'
-import OrderModel from './order-item.model'
+import OrderModel from './order.model'
 
 @Table({
   tableName: 'order_items',
@@ -31,7 +31,7 @@ export default class OrderItemModel extends Model {
   declare order_id: string
 
   @BelongsTo(() => OrderModel)
-  declare order: OrderModel
+  declare order: Awaited<OrderModel>
 
   @Column({ allowNull: false })
   declare quantity: number
