@@ -6,7 +6,9 @@ export default class SendEmailWhenProductIsCreatedHandler
 {
   handle(event: ProductCreatedEvent): void {
     console.log(
-      `Sending email to admin about product ${event.eventData} created at ${event.dataTimeOccurred}`
+      `Sending email to admin about product ${JSON.stringify(
+        event.eventData
+      )} created at ${event.dataTimeOccurred}`
     )
   }
 }
